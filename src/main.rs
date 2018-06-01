@@ -11,6 +11,7 @@ use ignore::WalkState::*;
 use std::sync::{Arc, Mutex};
 use std::env::args;
 use std::collections::HashMap;
+use std::cmp;
 use human_size::{Size, Multiple};
 
 fn main() {
@@ -71,7 +72,7 @@ fn main() {
 
     let mut count_vec: Vec<_> = all.iter().collect();
     count_vec.sort_by(|a, b| b.1.cmp(a.1));
-    for x in 0..10 {
+    for x in 0..cmp::min(10, count_vec.len()) {
         println!("{} {}", get_human_readable_name(*count_vec[x].1), count_vec[x].0);
     }
     println!("Total size of folder:\n {}", get_human_readable_name(res));
