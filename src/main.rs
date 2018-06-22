@@ -19,7 +19,7 @@ use std::sync::{Arc, Mutex};
 fn main() {
     let matches = App::new(crate_name!())
         .version(crate_version!())
-        .about("ripdu is a tool to get your disk space back")
+        .about(crate_description!())
         .author(crate_authors!())
         .arg(
             Arg::with_name("FOLDER")

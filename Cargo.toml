@@ -2,6 +2,13 @@
 name = "ripdu"
 version = "0.1.3"
 authors = ["Nikolajus Krauklis <nikolajus@gmail.com>"]
+description = "ripdu is a command line disk usage utility - get back your space"
+documentation = "https://github.com/dzhibas/ripdu"
+homepage = "https://github.com/dzhibas/ripdu"
+repository = "https://github.com/dzhibas/ripdu"
+readme = "README.md"
+keywords = ["du", "disk", "space", "usage"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 ignore = "0.4.2"
