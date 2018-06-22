@@ -1,7 +1,7 @@
 ripdu
 --
 
-Ripdu ripdu is a command line disk usage utility. it's build on rust and uses multi-thread
+ripdu is a command line disk usage utility. it's build on rust and uses multi-thread
 directory traversal same as used in ripgrep and fd
 
 ### Usage
