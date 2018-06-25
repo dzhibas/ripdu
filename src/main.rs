@@ -16,6 +16,10 @@ use std::collections::HashMap;
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::{Arc, Mutex};
 
+// save into hashmap only files which is greater than this size 
+// as uses mostly doesnt care about small files in this utility
+const MIN_FILE_SIZE:u64 = 1048576;
+
 fn main() {
     let matches = App::new(crate_name!())
         .version(crate_version!())
@@ -71,8 +75,8 @@ fn main() {
                     if result_type.is_file() && !result_type.is_symlink() {
                         match pp.metadata() {
                             Ok(m) => {
-                                // add into verbose hashmap only if size more than 10Mb
-                                if m.len() > 1048576u64 {
+                                // add into verbose hashmap only if size more than 1Mb
+                                if m.len() > MIN_FILE_SIZE {
                                     let mut data = files_in.lock().unwrap();
                                     data.insert(d, m.len());
                                 }
