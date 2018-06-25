@@ -7,8 +7,9 @@ directory traversal same as used in ripgrep and fd
 ### Usage
 
 ```
+$ ripdu --help
+
 ripdu 0.1.3
-Nikolajus Krauklis <nikolajus@gmail.com>
 ripdu is a command line disk usage utility - get back your space
 
 USAGE:
