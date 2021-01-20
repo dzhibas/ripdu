@@ -11,7 +11,7 @@ keywords = ["du", "disk", "space", "usage"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-ignore = "0.4.2"
+ignore = "0.4.17"
 human-size = "0.3.0"
 num_cpus = "1.8.0"
 clap = "2.31.2"
